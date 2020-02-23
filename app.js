@@ -1,9 +1,12 @@
 let express = require('express');
 let bodyParser = require('body-parser');
 
-let app = express();
+const app = express();
 
 let character_router = require('./routes/characters');
+
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 // CORS
 app.use((req, res, next) => {
