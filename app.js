@@ -17,6 +17,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/api', character_router);
+app.use('/starwars', character_router);
 
 module.exports = app;
