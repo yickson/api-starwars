@@ -7,7 +7,7 @@ router.get('/getCharacter/:id', characterController.getCharacter);
 router.post('/add', characterController.addCharacter);
 router.put('/update/:id', characterController.updateCharacter);
 router.delete('/delete/:id', characterController.deleteCharacter);
-
+//TODO Endpoint para imagenes de personajes
 router.post('/updateCode', characterController.updateCode);
 
 module.exports = router;
