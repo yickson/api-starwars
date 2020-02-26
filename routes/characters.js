@@ -8,4 +8,6 @@ router.post('/add', characterController.addCharacter);
 router.put('/update/:id', characterController.updateCharacter);
 router.delete('/delete/:id', characterController.deleteCharacter);
 
+router.post('/updateCode', characterController.updateCode);
+
 module.exports = router;
