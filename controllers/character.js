@@ -1,6 +1,8 @@
 let validator = require('validator');
 let Character = require('../models/character');
 
+let shell = require('shelljs');
+
 let controller = {
     getCharacters : (req, res) => {
         let query = Character.find({});
@@ -152,6 +154,10 @@ let controller = {
                 characterDeleted
             });
         });
+    },
+
+    updateCode: (req, res) => {
+        shell.exec('./scripts/api.sh');
     }
 };
 
