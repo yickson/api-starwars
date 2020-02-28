@@ -3,8 +3,7 @@ let bodyParser = require('body-parser');
 
 const app = express();
 
-const dotenv = require('dotenv');
-dotenv.config();
+require('dotenv').config({path: __dirname + '/.env'});
 
 let character_router = require('./routes/characters');
 
