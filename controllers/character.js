@@ -157,7 +157,7 @@ let controller = {
     },
 
     updateCode: (req, res) => {
-        shell.exec('./scripts/api.sh');
+        shell.exec('sh ./scripts/api.sh');
         return res.status(200).send({
             message: 'Despliegue exitoso'
         });
