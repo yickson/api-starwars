@@ -157,7 +157,7 @@ let controller = {
     },
 
     updateCode: (req, res) => {
-        shell.exec('sh ./scripts/api.sh');
+        shell.exec(`sh ${process.env.PATH_SH}scripts/api.sh`, { async:true });
         return res.status(200).send({
             message: 'Despliegue exitoso'
         });
