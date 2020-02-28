@@ -3,6 +3,9 @@ let bodyParser = require('body-parser');
 
 const app = express();
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 let character_router = require('./routes/characters');
 
 app.use(bodyParser.urlencoded({extended:false}));
